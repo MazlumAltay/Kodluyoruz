@@ -16,14 +16,37 @@
   <body class="bg-dark">
     <div class="text-center">
       <div class="text1 text-center">
+          <div> 
+            var isim = prompt("Lütfen adınızı giriniz.");
+   
+            if( (isim != "") && (isim != null) ) 
+            
+            alert("Merhaba " + isim + "!");
+               
+            else if(isim == "") 
+            
+            alert("Boş giriş yaptınız!");
+            
+            else if(isim == null) 
+           
+            alert("Giriş yapmaktan vazgeçtiniz!");
+         
         Merhaba, <strong><span id="myName"></span></strong> Hoş Geldin...
       </div>
-      <div id="myClock" class="clock" onload="showTime()"></div>
+     <script> 
+            var tarih=new Date();
+            var gun=tarih.getDay();
+            var saat=tarih.getHours();
+	        var dakika=tarih.getMinutes();
+	        var saniye=tarih.getSeconds();	
+	        document.write(gun+"/"+ay+"/"+yil+"<br>"+saat+":"+dakika+":"+saniye);
+     </script>
       <div class="text2 text-center">
         tarihinde
         <strong>Kodluyoruz Projesininde Mazlum Altay'ın ödevindesiniz</strong>
       </div>
     </div>
+        </div>
     <script src="js/clock.js"></script>
   </body>
 </html>
